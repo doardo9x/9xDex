@@ -1,0 +1,10 @@
+Configuração da conta local do GIT:
+    git config --global user.name doardo9x
+    git config --global user.email eduardo010304@gmail.com
+
+Criar um projeto AspNet MVC
+    dotnet new mvc -o Pokedex
+
+Executar o projeto
+    dotnet run
+    dotnet watch run --project pokedex\pokedex.csproj
