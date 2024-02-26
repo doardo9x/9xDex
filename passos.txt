@@ -7,4 +7,4 @@ Criar um projeto AspNet MVC
 
 Executar o projeto
     dotnet run
-    dotnet watch run --project pokedex\pokedex.csproj
+    dotnet watch run
