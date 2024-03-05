@@ -10,8 +10,8 @@ namespace Pokedex.Models;
 
         public string Especie { get; set; }
 
-        public List<string> Tipo { get; set; }
-
+        public List<string> Tipo { get; set; } = []; 
+        
         public double Altura { get; set; }
 
         public double Peso { get; set; }

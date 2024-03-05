@@ -16,7 +16,7 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        List<Pokemon> pokemons= [];
+        List<Pokemon> pokemons = [];
         using (StreamReader leitor = new("Data\\pokemons.json"))
         {
             string dados = leitor.ReadToEnd();
@@ -26,7 +26,7 @@ public class HomeController : Controller
         using (StreamReader leitor = new("Data\\tipos.json"))
         {
             string dados = leitor.ReadToEnd();
-            tipos =JsonSerializer.Deserialize<List<Tipo>>(dados);
+            tipos = JsonSerializer.Deserialize<List<Tipo>>(dados);
         }
         ViewData ["Tipos"] = tipos;
         return View(pokemons);
