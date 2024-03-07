@@ -32,6 +32,27 @@ public class HomeController : Controller
         return View(pokemons);
     }
 
+    public IActionResult Details(int id)
+    {
+        List<Pokemon> pokemons = [];
+        using (StreamReader leitor = new("Data\\pokemons.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            pokemons = JsonSerializer.Deserialize<List<Pokemon>>(dados);
+        }
+        List<Tipo> tipos = [];
+        using (StreamReader leitor = new("Data\\tipos.json"))
+        {
+            string dados = leitor.ReadToEnd();
+            tipos = JsonSerializer.Deserialize<List<Tipo>>(dados);
+        }
+        ViewData["Tipos"] = tipos;
+        var pokemon = pokemons
+            .Where(p => p.Numero == id)
+            .FirstOrDefault();
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();
