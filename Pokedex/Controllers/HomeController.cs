@@ -18,7 +18,7 @@ public class HomeController : Controller
     {
         List<Pokemon> pokemons = GetPokemons();
         List<Tipo> tipos = GetTipos();
-        ViewData ["Tipos"] = tipos;
+        ViewData["Tipos"] = tipos;
         return View(pokemons);
     }
 

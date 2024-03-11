@@ -2,7 +2,7 @@
     let cards, i;
     let count = 0;
     cards = document.getElementsByClassName("card");
-    buttons - document.getElementsByClassName("btn-filter");
+    buttons = document.getElementsByClassName("btn-filter");
     for (i = 0; i < cards.length; i++) {
         cards[i].parentElement.style.display = 'none';
         if (cards[i].classList.contains(type) || type === "all") {
